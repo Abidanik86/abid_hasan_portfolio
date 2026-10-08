@@ -38,10 +38,12 @@ export default function App() {
   return (
     <div className="app-root">
       {/* Ambient background light orbs */}
-      <div className="ambient-glow" style={{ top: '5%', left: '5%', width: '450px', height: '450px', background: 'rgba(6, 182, 212, 0.12)' }}></div>
-      <div className="ambient-glow" style={{ top: '25%', right: '5%', width: '500px', height: '500px', background: 'rgba(16, 185, 129, 0.1)' }}></div>
-      <div className="ambient-glow" style={{ top: '60%', left: '10%', width: '400px', height: '400px', background: 'rgba(139, 92, 246, 0.09)' }}></div>
-      <div className="ambient-glow" style={{ top: '85%', right: '15%', width: '450px', height: '450px', background: 'rgba(6, 182, 212, 0.1)' }}></div>
+      <div className="ambient-glow-wrapper" aria-hidden="true">
+        <div className="ambient-glow" style={{ top: '5%', left: '5%', width: '450px', height: '450px', background: 'rgba(6, 182, 212, 0.12)' }}></div>
+        <div className="ambient-glow" style={{ top: '25%', right: '5%', width: '500px', height: '500px', background: 'rgba(16, 185, 129, 0.1)' }}></div>
+        <div className="ambient-glow" style={{ top: '60%', left: '10%', width: '400px', height: '400px', background: 'rgba(139, 92, 246, 0.09)' }}></div>
+        <div className="ambient-glow" style={{ top: '85%', right: '15%', width: '450px', height: '450px', background: 'rgba(6, 182, 212, 0.1)' }}></div>
+      </div>
 
       {/* Floating Header with Theme Toggle */}
       <Navbar 

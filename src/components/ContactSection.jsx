@@ -8,7 +8,6 @@ import {
   Sparkles, 
   ExternalLink, 
   ShieldCheck, 
-  Briefcase,
   FileCheck
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
@@ -107,18 +106,6 @@ export default function ContactSection() {
                   <span>Explore</span>
                   <ExternalLink size={13} />
                 </a>
-              </div>
-
-              {/* Verified Availability Card */}
-              <div className="contact-channel-card glass-panel">
-                <div className="contact-channel-icon emerald">
-                  <Briefcase size={22} />
-                </div>
-                <div className="contact-channel-details">
-                  <span className="contact-channel-label">Role Availability</span>
-                  <span className="contact-channel-val">Backend & Full-Stack Systems</span>
-                </div>
-                <span className="badge-status-pill font-mono">Open</span>
               </div>
 
             </div>

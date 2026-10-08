@@ -127,47 +127,49 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="mobile-nav-drawer glass-panel">
-          <nav className="mobile-nav-links">
-            <a href="#about" className="mobile-nav-link" onClick={navClick}>About</a>
-            <a href="#skills" className="mobile-nav-link" onClick={navClick}>Competencies</a>
-            <a href="#projects" className="mobile-nav-link" onClick={navClick}>Featured Projects</a>
-            <a href="#architecture" className="mobile-nav-link" onClick={navClick}>System Architecture</a>
-            <a href="#experience" className="mobile-nav-link" onClick={navClick}>Experience & Education</a>
-            <a href="#contact" className="mobile-nav-link" onClick={navClick}>Contact & Inquiry</a>
-          </nav>
+        <div className="container mobile-drawer-container">
+          <div className="mobile-nav-drawer glass-panel">
+            <nav className="mobile-nav-links">
+              <a href="#about" className="mobile-nav-link" onClick={navClick}>About</a>
+              <a href="#skills" className="mobile-nav-link" onClick={navClick}>Competencies</a>
+              <a href="#projects" className="mobile-nav-link" onClick={navClick}>Featured Projects</a>
+              <a href="#architecture" className="mobile-nav-link" onClick={navClick}>System Architecture</a>
+              <a href="#experience" className="mobile-nav-link" onClick={navClick}>Experience & Education</a>
+              <a href="#contact" className="mobile-nav-link" onClick={navClick}>Contact & Inquiry</a>
+            </nav>
 
-          <div className="mobile-drawer-footer">
-            <button 
-              type="button" 
-              className="btn btn-emerald mobile-drawer-contact-btn"
-              onClick={handleContactClick}
-            >
-              <Mail size={16} />
-              <span>Get in Touch</span>
-            </button>
+            <div className="mobile-drawer-footer">
+              <button 
+                type="button" 
+                className="btn btn-emerald mobile-drawer-contact-btn"
+                onClick={handleContactClick}
+              >
+                <Mail size={16} />
+                <span>Get in Touch</span>
+              </button>
 
-            <div className="mobile-drawer-socials">
-              <a 
-                href={personalInfo.github} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="mobile-social-chip"
-              >
-                <GithubIcon size={16} />
-                <span>GitHub</span>
-                <ExternalLink size={12} className="mobile-chip-arrow" />
-              </a>
-              <a 
-                href={personalInfo.linkedin} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="mobile-social-chip"
-              >
-                <LinkedinIcon size={16} />
-                <span>LinkedIn</span>
-                <ExternalLink size={12} className="mobile-chip-arrow" />
-              </a>
+              <div className="mobile-drawer-socials">
+                <a 
+                  href={personalInfo.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="mobile-social-chip"
+                >
+                  <GithubIcon size={16} />
+                  <span>GitHub</span>
+                  <ExternalLink size={12} className="mobile-chip-arrow" />
+                </a>
+                <a 
+                  href={personalInfo.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="mobile-social-chip"
+                >
+                  <LinkedinIcon size={16} />
+                  <span>LinkedIn</span>
+                  <ExternalLink size={12} className="mobile-chip-arrow" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

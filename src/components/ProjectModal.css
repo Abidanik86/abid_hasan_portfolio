@@ -228,3 +228,22 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .project-modal-header {
+    padding: 0.85rem 1rem;
+  }
+  .project-modal-title-box {
+    padding: 0.5rem 1rem 0.25rem 1rem;
+  }
+  .project-modal-title {
+    font-size: 1.25rem;
+  }
+  .project-modal-body {
+    padding: 0.75rem 1rem 1rem 1rem;
+    gap: 1rem;
+  }
+  .modal-metrics-card {
+    padding: 0.65rem 0.85rem;
+  }
+}

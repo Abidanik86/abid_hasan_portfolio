@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowUp, Mail, Heart, Triangle } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
 import './Footer.css';
@@ -65,12 +64,6 @@ export default function Footer() {
               >
                 <Mail size={18} />
               </a>
-            </div>
-
-            {/* Vercel Badge */}
-            <div className="footer-vercel-badge">
-              <Triangle size={14} className="vercel-triangle" />
-              <span>Engineered for Vercel Edge Hosting</span>
             </div>
           </div>
         </div>

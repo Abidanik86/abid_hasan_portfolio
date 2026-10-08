@@ -236,3 +236,61 @@
     padding: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 30px;
+  }
+  .timeline-line {
+    left: 7px;
+  }
+  .timeline-marker {
+    left: -1px;
+    width: 18px;
+    height: 18px;
+  }
+  .education-marker {
+    left: -5px;
+    width: 26px;
+    height: 26px;
+  }
+  .timeline-card {
+    padding: 1.15rem 0.95rem;
+    gap: 1rem;
+  }
+  .timeline-role-title {
+    font-size: 1.25rem;
+  }
+  .timeline-company-row {
+    gap: 0.45rem;
+  }
+  .timeline-company-name {
+    font-size: 0.925rem;
+  }
+  .achievement-item {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .experience-section {
+    padding: 3rem 0;
+  }
+  .timeline-item {
+    padding-left: 24px;
+  }
+  .timeline-line {
+    left: 5px;
+  }
+  .timeline-marker {
+    left: -3px;
+    width: 16px;
+    height: 16px;
+  }
+  .timeline-card {
+    padding: 1rem 0.75rem;
+  }
+  .timeline-role-title {
+    font-size: 1.15rem;
+  }
+}

@@ -137,7 +137,8 @@ export default function Hero() {
                 onClick={() => setActiveTab('profile')}
               >
                 <User size={15} />
-                <span>Identity & Profile</span>
+                <span className="tab-label-full">Identity & Profile</span>
+                <span className="tab-label-short">Profile</span>
               </button>
 
               <button 
@@ -146,7 +147,8 @@ export default function Hero() {
                 onClick={() => setActiveTab('terminal')}
               >
                 <Terminal size={15} />
-                <span>Live System Console</span>
+                <span className="tab-label-full">Live System Console</span>
+                <span className="tab-label-short">Console</span>
               </button>
             </div>
 

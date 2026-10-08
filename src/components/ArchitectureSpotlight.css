@@ -2,6 +2,9 @@
   padding: 5rem 0;
   position: relative;
   z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .arch-flow-selector {
@@ -77,6 +80,9 @@
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-card);
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .arch-stage-header {
@@ -119,8 +125,11 @@
   align-items: center;
   gap: 0.75rem;
   overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
   padding: 1rem 0 2rem 0;
   margin-bottom: 1.5rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 .arch-node-wrapper {
@@ -228,6 +237,7 @@
 @media (max-width: 768px) {
   .arch-flow-selector {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
   .arch-stage {
     padding: 1.25rem;
@@ -241,15 +251,18 @@
   .arch-stage {
     padding: 1rem;
   }
+  .arch-stage-title {
+    font-size: 1.2rem;
+  }
   .arch-node-btn {
-    width: 145px;
-    padding: 0.85rem 1rem;
+    width: 140px;
+    padding: 0.75rem 0.85rem;
   }
   .arch-detail-header h4 {
     font-size: 1.15rem;
   }
   .arch-detail-desc {
-    font-size: 0.925rem;
+    font-size: 0.9rem;
   }
   .arch-step-nav-footer {
     flex-direction: column;
@@ -258,5 +271,32 @@
   .arch-step-nav-footer .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .arch-section {
+    padding: 3rem 0;
+  }
+  .arch-selector-btn {
+    padding: 0.85rem;
+    gap: 0.75rem;
+  }
+  .arch-btn-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .arch-btn-title {
+    font-size: 0.9rem;
+  }
+  .arch-stage {
+    padding: 0.85rem 0.65rem;
+  }
+  .arch-node-btn {
+    width: 125px;
+    padding: 0.65rem 0.75rem;
+  }
+  .arch-step-detail {
+    padding: 0.85rem;
   }
 }
