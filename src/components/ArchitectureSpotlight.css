@@ -1,0 +1,235 @@
+.arch-section {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.arch-flow-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.arch-selector-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-smooth);
+}
+
+.arch-selector-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-cyan);
+}
+
+.arch-selector-btn.active {
+  background: var(--bg-elevated);
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-card);
+}
+
+.arch-btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.arch-selector-btn.active .arch-btn-icon {
+  background: var(--accent-cyan);
+  color: #ffffff;
+}
+
+.arch-btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.arch-btn-title {
+  font-weight: 700;
+  font-size: 0.975rem;
+  color: var(--text-primary);
+}
+
+.arch-btn-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Stage */
+.arch-stage {
+  padding: 2.25rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.arch-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.arch-badge-scale {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.12);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.arch-stage-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.arch-step-indicator {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+}
+
+/* Track Nodes */
+.arch-nodes-track {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 1rem 0 2rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.arch-node-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.arch-node-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  width: 175px;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.arch-node-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-cyan);
+}
+
+.arch-node-btn.active {
+  background: var(--bg-elevated);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px var(--accent-cyan-glow);
+}
+
+.arch-node-number {
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+.arch-node-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arch-node-role {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+.arch-node-connector {
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+}
+
+.arch-node-connector.active {
+  color: var(--accent-cyan);
+}
+
+/* Detail panel */
+.arch-step-detail {
+  padding: 1.75rem;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.arch-detail-header {
+  margin-bottom: 1rem;
+}
+
+.arch-detail-tag {
+  font-size: 0.75rem;
+  color: var(--accent-emerald);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.arch-detail-header h4 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+.arch-detail-desc {
+  font-size: 1.025rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.arch-step-nav-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .arch-flow-selector {
+    grid-template-columns: 1fr;
+  }
+  .arch-stage {
+    padding: 1.25rem;
+  }
+}
