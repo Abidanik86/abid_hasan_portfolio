@@ -34,10 +34,10 @@ export const metricsData = [
     description: "Fintech, IoT, Postal, E-commerce, Automation"
   },
   {
-    label: "Event Streaming Throughput",
-    value: "100k+",
-    unit: "Events",
-    description: "Kafka & RabbitMQ asynchronous queue pipelines"
+    label: "Queue & System Reliability",
+    value: "99.9%",
+    unit: "Delivery",
+    description: "Kafka & RabbitMQ with dead-letter queue recovery"
   }
 ];
 

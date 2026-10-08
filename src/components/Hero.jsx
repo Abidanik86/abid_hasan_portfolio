@@ -45,8 +45,8 @@ export default function Hero() {
       setTerminalOutput([
         { type: 'cmd', text: '$ kafka-consumer-groups.sh --describe --group ballot-workers' },
         { type: 'info', text: 'Topic: national.ballot.events | Partition Count: 16' },
-        { type: 'success', text: 'Consumer Lag: 0 messages across all partitions' },
-        { type: 'success', text: 'Throughput: ~14,200 events/sec peak ingestion' },
+        { type: 'success', text: 'Consumer Lag: 0 messages across active partitions' },
+        { type: 'success', text: 'Pipeline Status: Resilient event ingestion (0 loss)' },
         { type: 'success', text: 'Dead-Letter Queue (DLQ): 0 dropped messages' },
         { type: 'highlight', text: 'Auto-recovery & Exponential Backoff: ACTIVE' }
       ]);
@@ -54,10 +54,10 @@ export default function Hero() {
       setTerminalOutput([
         { type: 'cmd', text: '$ docker ps --format "table {{.Names}}\\t{{.Status}}"' },
         { type: 'info', text: 'Production Services Monitored:' },
-        { type: 'success', text: '1. dakporichoy-sso-auth      Up 180 days (Govt SSO)' },
-        { type: 'success', text: '2. postal-ballot-consumer     Up 140 days (Kafka/Go)' },
-        { type: 'success', text: '3. slotbro-automation-worker  Up 45 days (FastAPI/Playwright)' },
-        { type: 'success', text: '4. aquabit-iot-engine         Up 90 days (Fiber/Redis)' },
+        { type: 'success', text: '1. dakporichoy-sso-auth      Up (Healthy • Govt SSO)' },
+        { type: 'success', text: '2. postal-ballot-consumer     Up (Healthy • Kafka/Go)' },
+        { type: 'success', text: '3. slotbro-automation-worker  Up (Healthy • FastAPI/Playwright)' },
+        { type: 'success', text: '4. aquabit-iot-engine         Up (Healthy • Fiber/Redis)' },
         { type: 'highlight', text: 'All microservices running under Docker containerization.' }
       ]);
     } else if (cmdKey === 'channels.info') {
