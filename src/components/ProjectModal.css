@@ -191,3 +191,40 @@
   align-items: center;
   gap: 0.75rem;
 }
+
+@media (max-width: 600px) {
+  .project-modal-container {
+    max-height: 94vh;
+    border-radius: var(--radius-lg);
+  }
+  .project-modal-header {
+    padding: 1rem 1.25rem;
+  }
+  .project-modal-title-box {
+    padding: 0.75rem 1.25rem 0.25rem 1.25rem;
+  }
+  .project-modal-title {
+    font-size: 1.35rem;
+  }
+  .project-modal-body {
+    padding: 0.75rem 1.25rem 1.25rem 1.25rem;
+    gap: 1.15rem;
+  }
+  .project-modal-footer {
+    padding: 1rem 1.25rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+  .modal-links-left {
+    flex-direction: column;
+    width: 100%;
+  }
+  .modal-links-left .btn {
+    width: 100%;
+  }
+  .project-modal-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

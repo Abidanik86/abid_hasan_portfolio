@@ -232,4 +232,31 @@
   .arch-stage {
     padding: 1.25rem;
   }
+  .arch-selector-btn {
+    padding: 1rem 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .arch-stage {
+    padding: 1rem;
+  }
+  .arch-node-btn {
+    width: 145px;
+    padding: 0.85rem 1rem;
+  }
+  .arch-detail-header h4 {
+    font-size: 1.15rem;
+  }
+  .arch-detail-desc {
+    font-size: 0.925rem;
+  }
+  .arch-step-nav-footer {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .arch-step-nav-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

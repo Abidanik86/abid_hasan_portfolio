@@ -3,9 +3,10 @@ import {
   Mail, 
   Menu, 
   X, 
-  Sun,
-  Moon,
-  Sparkles
+  Sun, 
+  Moon, 
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
@@ -17,7 +18,7 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -27,13 +28,22 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
     if (mobileMenuOpen) setMobileMenuOpen(false);
   };
 
+  const handleContactClick = () => {
+    if (mobileMenuOpen) setMobileMenuOpen(false);
+    if (onOpenContact) onOpenContact();
+    else {
+      const el = document.getElementById('contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className={`navbar-wrapper ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-inner">
-        {/* Brand Logo & Name on One Line */}
+        {/* Brand Logo & Name */}
         <a href="#hero" className="brand-logo" onClick={navClick}>
           <div className="brand-logo-mark">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="brand-logo-svg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="brand-logo-svg">
               <polyline points="16 18 22 12 16 6" />
               <polyline points="8 6 2 12 8 18" />
             </svg>
@@ -60,7 +70,7 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
 
         {/* Right Action Buttons */}
         <div className="nav-actions">
-          {/* Dark / Light Theme Mode Toggle Button */}
+          {/* Dark / Light Theme Mode Toggle Button (Visible on all screens) */}
           <button 
             type="button"
             className="theme-toggle-btn"
@@ -71,12 +81,12 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
             {theme === 'dark' ? <Sun size={18} className="theme-icon sun" /> : <Moon size={18} className="theme-icon moon" />}
           </button>
 
-          {/* Social Links */}
+          {/* Social Links (Hidden on small mobile, visible in drawer and on desktop) */}
           <a 
             href={personalInfo.github} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="nav-icon-link"
+            className="nav-icon-link desktop-only-action"
             title="GitHub Profile"
             aria-label="GitHub Profile"
           >
@@ -86,24 +96,18 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
             href={personalInfo.linkedin} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="nav-icon-link"
+            className="nav-icon-link desktop-only-action"
             title="LinkedIn Profile"
             aria-label="LinkedIn Profile"
           >
             <LinkedinIcon size={18} />
           </a>
 
-          {/* Connect CTA */}
+          {/* Connect CTA Button (Desktop) */}
           <button 
             type="button" 
-            className="btn btn-sm btn-emerald nav-hire-btn"
-            onClick={() => {
-              if (onOpenContact) onOpenContact();
-              else {
-                const el = document.getElementById('contact');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            className="btn btn-sm btn-emerald nav-hire-btn desktop-only-action"
+            onClick={handleContactClick}
           >
             <Mail size={15} />
             <span>Get in Touch</span>
@@ -116,7 +120,7 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -130,18 +134,41 @@ export default function Navbar({ onOpenContact, theme, onToggleTheme }) {
             <a href="#projects" className="mobile-nav-link" onClick={navClick}>Featured Projects</a>
             <a href="#architecture" className="mobile-nav-link" onClick={navClick}>System Architecture</a>
             <a href="#experience" className="mobile-nav-link" onClick={navClick}>Experience & Education</a>
-            <a href="#contact" className="mobile-nav-link" onClick={navClick}>Contact Me</a>
+            <a href="#contact" className="mobile-nav-link" onClick={navClick}>Contact & Inquiry</a>
           </nav>
-          <div className="mobile-drawer-actions">
-            <button
-              type="button"
-              className="btn btn-glass"
-              onClick={onToggleTheme}
-              style={{ width: '100%' }}
+
+          <div className="mobile-drawer-footer">
+            <button 
+              type="button" 
+              className="btn btn-emerald mobile-drawer-contact-btn"
+              onClick={handleContactClick}
             >
-              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-              <span>{theme === 'dark' ? 'Switch to White Mode' : 'Switch to Dark Mode'}</span>
+              <Mail size={16} />
+              <span>Get in Touch</span>
             </button>
+
+            <div className="mobile-drawer-socials">
+              <a 
+                href={personalInfo.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mobile-social-chip"
+              >
+                <GithubIcon size={16} />
+                <span>GitHub</span>
+                <ExternalLink size={12} className="mobile-chip-arrow" />
+              </a>
+              <a 
+                href={personalInfo.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="mobile-social-chip"
+              >
+                <LinkedinIcon size={16} />
+                <span>LinkedIn</span>
+                <ExternalLink size={12} className="mobile-chip-arrow" />
+              </a>
+            </div>
           </div>
         </div>
       )}

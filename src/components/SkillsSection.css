@@ -162,3 +162,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .skill-category-card {
+    padding: 1.35rem;
+  }
+  .skills-tab-nav {
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  .skills-nav-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.775rem;
+  }
+}
