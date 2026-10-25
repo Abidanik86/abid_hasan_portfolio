@@ -41,7 +41,7 @@ export default function AboutSection() {
             </h3>
 
             <p className="about-paragraph">
-              I am a <strong>Software Engineer</strong> with <strong>2.5+ years of commercial production experience</strong> architecting high-scale distributed backend systems, event-driven pipelines, and high-velocity microservices using <strong>Golang (Fiber)</strong> and <strong>Python (FastAPI, Django)</strong>.
+              I am a <strong>Software Engineer</strong> with <strong>3+ years of commercial production experience</strong> architecting high-scale distributed backend systems, event-driven pipelines, and high-velocity microservices using <strong>Golang (Fiber)</strong> and <strong>Python (FastAPI, Django)</strong>.
             </p>
 
             <p className="about-paragraph">
