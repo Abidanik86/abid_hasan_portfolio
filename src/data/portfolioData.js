@@ -17,7 +17,7 @@ export const personalInfo = {
 export const metricsData = [
   {
     label: "Commercial Experience",
-    value: "2.5+",
+    value: "3+",
     unit: "Years",
     description: "Production software engineering & microservices"
   },
