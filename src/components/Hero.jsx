@@ -88,7 +88,7 @@ export default function Hero() {
           </p>
 
           <p className="hero-pitch">
-            2.5+ years of commercial experience designing distributed microservices, event-driven pipelines (Kafka, RabbitMQ), and national-scale government infrastructure using <strong>Golang</strong> and <strong>Python</strong> — delivered alongside modern, fluid <strong>React</strong> frontends.
+            3+ years of commercial experience designing distributed microservices, event-driven pipelines (Kafka, RabbitMQ), and national-scale government infrastructure using <strong>Golang</strong> and <strong>Python</strong> — delivered alongside modern, fluid <strong>React</strong> frontends.
           </p>
 
           {/* Primary Action Buttons */}

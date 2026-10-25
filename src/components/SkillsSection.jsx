@@ -43,7 +43,7 @@ export default function SkillsSection() {
             Engineered with <span className="gradient-text-emerald">Production Depth</span>
           </h2>
           <p className="section-subtitle">
-            Specialized toolkit refined through 2.5+ years of building national-scale government infrastructure and distributed microservices.
+            Specialized toolkit refined through 2+ years of building national-scale government infrastructure and distributed microservices.
           </p>
         </div>
 
