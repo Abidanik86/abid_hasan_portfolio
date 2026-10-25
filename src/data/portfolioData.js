@@ -285,7 +285,7 @@ export const experienceData = [
     skills: ["Golang", "Go Fiber", "Python FastAPI", "React 19", "PostgreSQL", "Redis", "Docker", "Playwright", "GSAP 3"]
   },
   {
-    period: "September 2024 – March 2026",
+    period: "July 2024 – March 2026",
     role: "Backend Developer",
     company: "Smart Think",
     location: "Banani, Dhaka, Bangladesh",
@@ -302,7 +302,7 @@ export const experienceData = [
     skills: ["Django", "Django REST Framework", "Golang", "Apache Kafka", "RabbitMQ", "PostgreSQL", "Celery", "SSO & Cryptography"]
   },
   {
-    period: "March 2024 – September 2024",
+    period: "January 2024 – June 2024",
     role: "Backend Developer Intern",
     company: "Smart Think",
     location: "Banani, Dhaka, Bangladesh",
