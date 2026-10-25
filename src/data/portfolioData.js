@@ -11,7 +11,7 @@ export const personalInfo = {
   linkedinHandle: "in/abid-hasan-anik",
   photo: "/abid_hasan_anik.jpg",
   availabilityStatus: "Available for High-Impact Roles & Collaborations",
-  summary: `Production-focused Software Engineer with 2.5+ years of commercial experience architecting resilient backend systems, distributed microservices, and secure REST APIs using Golang (Fiber) and Python (FastAPI, Django). Track record delivering national-scale infrastructure including central government Single Sign-On (SSO) systems, postal ballot event-streaming engines (Kafka/Go), fintech Anti-Money Laundering (AML) platforms, and aquaculture IoT systems. Proven expertise in database query optimization (PostgreSQL, Redis), message broker pipelines (Celery, Kafka, RabbitMQ), browser automation (Playwright), and containerization (Docker). Accustomed to agile, remote, and asynchronous cross-functional workflows.`
+  summary: `Production-focused Software Engineer with 3+ years of commercial experience architecting resilient backend systems, distributed microservices, and secure REST APIs using Golang (Fiber) and Python (FastAPI, Django). Track record delivering national-scale infrastructure including central government Single Sign-On (SSO) systems, postal ballot event-streaming engines (Kafka/Go), fintech Anti-Money Laundering (AML) platforms, and aquaculture IoT systems. Proven expertise in database query optimization (PostgreSQL, Redis), message broker pipelines (Celery, Kafka, RabbitMQ), browser automation (Playwright), and containerization (Docker). Accustomed to agile, remote, and asynchronous cross-functional workflows.`
 };
 
 export const metricsData = [
